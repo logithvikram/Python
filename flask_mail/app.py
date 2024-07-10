@@ -5,10 +5,11 @@ app = Flask(__name__)
 mail = Mail(app)
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'logithwork@gmail.com'  
-app.config['MAIL_PASSWORD'] = '******'  
-app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USERNAME'] = 'logithvikram.krishnamoorthy@vexternal.com'  
+app.config['MAIL_PASSWORD'] = 'mixyzpgmfwbfqtnb'  
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
 
 mail = Mail(app)
 
@@ -16,7 +17,7 @@ mail = Mail(app)
 def index():
     msg = Message(
         'Hello from Flask-Mail',
-        sender='logithwork@gmail.com',  
+        sender='logithvikram.krishnamoorthy@vexternal.com',  
         recipients=['logithvikram2982002@gmail.com']  
     )
     msg.body = 'Hello Flask message sent from Flask-Mail'
